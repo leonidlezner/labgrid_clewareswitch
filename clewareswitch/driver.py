@@ -13,8 +13,10 @@ class ClewareSwitchDriver(Driver, SwitchProtocol):
     def __attrs_post_init__(self):
         super().__attrs_post_init__()
 
+    # TODO: Method for cleaning up
+
     def on(self, index):
-        print('Turn on {}'.format(index))
+        raise NotImplementedError
 
     def off(self, index):
         raise NotImplementedError

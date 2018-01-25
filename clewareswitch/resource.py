@@ -10,7 +10,7 @@ class ClewareSwitch(Resource):
     Args:
         serial (int): serial number of the switch
     """
-    serialnumber = attr.ib(validator=attr.validators.instance_of(int))
+    serial = attr.ib(validator=attr.validators.instance_of(int))
 
 
 

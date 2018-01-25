@@ -2,7 +2,7 @@ targets:
   main:
     resources:
       ClewareSwitch:
-        serialnumber: 1234
+        serial: 1234
     drivers:
       ClewareSwitchDriver: {}
 
