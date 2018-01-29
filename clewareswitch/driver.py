@@ -30,14 +30,14 @@ class ClewareSwitchDriver(Driver, SwitchProtocol):
             # Check the serial number
             if serial == self.device.serial:
                 ret = usb.ResetDevice(i)
+                #print(ret)
+
                 ret = usb.StartDevice(i)
+                #print(ret)
                 #TODO: Check the return value
 
                 self.usb = usb
                 self.device_index = i
-
-                # Bring all switches to a defined state
-                self.all_off()
 
                 break
             else:
@@ -79,7 +79,9 @@ class ClewareSwitchDriver(Driver, SwitchProtocol):
 
     def toggle(self, index):
         self.check_device()
-        if self.is_on(index):
+        state = self.is_on(index)
+
+        if state == True:
             self.off(index)
         else:
             self.on(index)
