@@ -11,9 +11,23 @@ class SwitchProtocol(abc.ABC):
         raise NotImplementedError
 
     @abc.abstractmethod
+    def is_on(self, index):
+        raise NotImplementedError	
+
+    @abc.abstractmethod
+    def toggle(self, index):
+        raise NotImplementedError
+
+    @abc.abstractmethod
     def all_on(self):
         raise NotImplementedError
 
     @abc.abstractmethod
     def all_off(self):
         raise NotImplementedError
+
+    @abc.abstractmethod
+    def all_toggle(self):
+        raise NotImplementedError
+
+
